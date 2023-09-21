@@ -11,12 +11,13 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+            </div>
+
+            <div class="hidden sm:flex sm:items-center sm:ml-auto">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Новое объявление') }}
                     </x-nav-link>
                 </div>
-            </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -35,7 +36,7 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('пиздец Хуефиль') }}
+                            {{ __('Профиль ') }}
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Новое объявление') }}
