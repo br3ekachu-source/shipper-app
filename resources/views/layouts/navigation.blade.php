@@ -13,11 +13,17 @@
                 <!-- Navigation Links -->
             </div>
 
-            <div class="hidden sm:flex sm:items-center sm:ml-auto">
+            <div class="hidden sm:flex sm:items-center sm:ml-auto text-text-cream mr-4">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Новое объявление') }}
                     </x-nav-link>
-                </div>
+            </div>
+            <div class="shrink-0 flex items-center">
+                <a href="{{ route('dashboard') }}" class="shrink-0 flex items-center">
+                        <x-geotag-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <div class="ml-4">Сочи</div>
+                </a>
+            </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
