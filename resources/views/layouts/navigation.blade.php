@@ -1,3 +1,18 @@
+<style type="text/css">
+.favorite-icon {
+position: absolute;
+top: 2.5%;
+right: 36%;
+color: #C0C0C0;
+font-size: 1.5em;
+cursor: pointer;
+}
+
+.favorite-icon.liked {
+  color: red;
+}
+</style>
+
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +27,11 @@
 
                 <!-- Navigation Links -->
             </div>
-
+            <div class="shrink-0 flex items-center">
+                    <a href="{{ route('favorites') }}">
+                        <i class="fas fa-heart favorite-icon"></i>
+                    </a>
+                </div>
             <div class="hidden sm:flex sm:items-center sm:ml-auto text-text-cream mr-4">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Новое объявление') }}
