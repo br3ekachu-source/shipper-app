@@ -2,6 +2,9 @@
 
 use App\Models\Address;
 use App\Models\AdvertGeneralInformation;
+use App\Models\AdvertHullInformation;
+use App\Models\AdvertLegalInformation;
+use App\Models\AdvertTechincalInformation;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -16,21 +19,16 @@ return new class extends Migration
     {
         Schema::create('adverts', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class);
-            $table->foreignIdFor(Address::class);
+            $table->foreignIdFor(User::class); //пользователь
+            $table->float('price'); //цена
+            $table->foreignIdFor(Address::class); //адрес
+            $table->foreignIdFor(AdvertLegalInformation::class); //юридическая информация
+            $table->foreignIdFor(AdvertTechincalInformation::class); //техническая информация
+            $table->foreignIdFor(AdvertHullInformation::class); //информация о корпусе
+            $table->string('header'); //заголовок
             $table->text('description'); //описание
-            $table->integer('exploitation_type'); //коммерческий/некоммерческий 
-            $table->integer('self_propelled'); //самоходность
-            $table->boolean('valid_documents'); //действующие документы
-            $table->boolean('was_registered')->nullable(); //было ли на учете
-            $table->boolean('was_registered_more_than_5_year_ago')->nullable(); //находилось на учете больше 5 лет назад?
-            $table->integer('full_sizeble')->nullable(); //полноразмерное/маломерное
-            $table->integer('boat_status')->nullable(); //статус судна
-            $table->integer('object_status')->nullable(); //статус объекта
             $table->foreignIdFor(AdvertGeneralInformation::class); //общие сведения
-
-
-            $table->timestamps();
+            $table->timestamps(); //дата создания объявления
         });
     }
 

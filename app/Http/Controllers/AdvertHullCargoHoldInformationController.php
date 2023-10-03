@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AdvertGeneralInformation;
+use App\Models\AdvertHullCargoHoldInformation;
 use Illuminate\Http\Request;
 
-class AdvertGeneralInformationController extends Controller
+class AdvertHullCargoHoldInformationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class AdvertGeneralInformationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(AdvertGeneralInformation $advertGeneralInformation)
+    public function show(AdvertHullCargoHoldInformation $advertHullCargoHoldInformation)
     {
         //
     }
@@ -42,7 +42,7 @@ class AdvertGeneralInformationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AdvertGeneralInformation $advertGeneralInformation)
+    public function edit(AdvertHullCargoHoldInformation $advertHullCargoHoldInformation)
     {
         //
     }
@@ -50,7 +50,7 @@ class AdvertGeneralInformationController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, AdvertGeneralInformation $advertGeneralInformation)
+    public function update(Request $request, AdvertHullCargoHoldInformation $advertHullCargoHoldInformation)
     {
         //
     }
@@ -58,7 +58,7 @@ class AdvertGeneralInformationController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AdvertGeneralInformation $advertGeneralInformation)
+    public function destroy(AdvertHullCargoHoldInformation $advertHullCargoHoldInformation)
     {
         //
     }
