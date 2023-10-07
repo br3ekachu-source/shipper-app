@@ -3,6 +3,7 @@ fontAwesomeLink.rel = 'stylesheet';
 fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
 document.head.appendChild(fontAwesomeLink);
 
+// Добавление CSS стилей
 const cssStyles = `
 .heart-icon {
 position: absolute;
@@ -41,9 +42,9 @@ const generateRandomDate = (start, end) => {
 
 const createCard = (images, title, description, date, index) => {
   return `
-<div class="card bg-white p-4 shadow-md rounded-lg overflow-hidden flex items-center" style="max-width: full; position: relative;">
-    <img class="card--image object-cover h-40 w-full cursor-pointer" src="${images[0]}" alt="Card ${index}" data-images='${JSON.stringify(images)}' style="height: 160px; max-width: 240px; object-fit: cover;">
-    <div class="card--content p-4 inset-y-0 right-1 ms-4">
+<div class="card bg-white p-4 shadow-md rounded-lg overflow-hidden" style="max-width: 250px; position: relative;">
+    <img class="card--image object-cover h-40 w-full cursor-pointer" src="${images[0]}" alt="Card ${index}" data-images='${JSON.stringify(images)}' style="height: 160px; object-fit: cover;">
+    <div class="card--content p-4">
         <button class="card--fav-btn focus:outline-none" style="position: absolute; bottom: 8.4rem; right: 0.1rem;">
             <i class="fas fa-heart heart-icon"></i>
         </button>
@@ -51,9 +52,9 @@ const createCard = (images, title, description, date, index) => {
         <p class="card--description text-sm text-gray-600">${description}</p>
         <time class="card--date text-xs text-gray-500 mt-2">${date}</time>
     </div>
-    <div style="position: absolute; top: 1rem; left: 15px; width: 80px; height: 160px;" data-sector="1"></div>
-    <div style="position: absolute; top: 1rem; left: 95px; width: 80px; height: 160px;" data-sector="2"></div>
-    <div style="position: absolute; top: 1rem; left: 175px; width: 80px; height: 160px;" data-sector="3"></div>
+    <div style="position: absolute; top: 1rem; left: 0; width: 33%; height: 50%;" data-sector="1"></div>
+    <div style="position: absolute; top: 1rem; left: 33%; width: 33%; height: 50%;" data-sector="2"></div>
+    <div style="position: absolute; top: 1rem; left: 66%; width: 33%; height: 50%;" data-sector="3"></div>
 </div>`;
 };
 
@@ -143,7 +144,6 @@ initiateSectors();
 
 const heartIcons = document.querySelectorAll('.heart-icon');
 const imageContainers = document.querySelectorAll('.image-container');
-const cards = document.querySelectorAll('.card');
 
 heartIcons.forEach((icon) => {
 icon.addEventListener('click', function () {
