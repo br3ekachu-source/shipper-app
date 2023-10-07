@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('adverts', AdvertController::class);
     Route::view('/favorites', 'favorites')->name('favorites');
+    Route::view('/create', 'create')->name('create');
 });
 
 

@@ -12,5 +12,5 @@
             </div>
         </div>
     </div>
-    @vite(['resources/js/generate_cards.js'])
+    @vite(['resources/js/generate_cards_dashboard.js'])
 </x-app-layout>

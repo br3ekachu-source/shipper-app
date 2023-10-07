@@ -33,7 +33,7 @@ cursor: pointer;
                     </a>
                 </div>
             <div class="hidden sm:flex sm:items-center sm:ml-auto text-text-cream mr-4">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('create')" :active="request()->routeIs('create')">
                         {{ __('Новое объявление') }}
                     </x-nav-link>
             </div>
