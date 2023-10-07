@@ -33,9 +33,7 @@ cursor: pointer;
                     </a>
                 </div>
             <div class="hidden sm:flex sm:items-center sm:ml-auto text-text-cream mr-4">
-                    <x-nav-link :href="route('adverts/create')" :active="request()->routeIs('adverts/create')">
-                        {{ __('Новое объявление') }}
-                    </x-nav-link>
+                <a href="{{ url('adverts.create') }}">Новое объявление</a>
             </div>
             <div class="shrink-0 flex items-center">
                 <a href="{{ route('dashboard') }}" class="shrink-0 flex items-center">
